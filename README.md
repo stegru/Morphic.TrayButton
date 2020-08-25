@@ -3,6 +3,8 @@
 Displays a button on the task tray, by shrinking the window list and positioning itself between that and the
 notification area.
 
+This looks and smells like a notification icon, but it's always visible.
+
 The taskbar is a window, having child windows like this: 
 
     [start][search][windows                 ][icons|clock]
@@ -12,8 +14,23 @@ The tray button is just another child window, inserted between the window list a
 
     [start][search][windows         ][button][icons|clock]
 
+![Screenshot](./example.png)
+
+## Why??
+
+The primary audience for [Morphic](https://morphic.world) is people who have difficulties using a computer. Accessing
+the software needs to be easy to perform and not change.
+
+A standard notification icon will hide itself in a non-discoverable place, and the method of preventing this
+(programatically) has been purposefully stopped..
+
+## History
 
 This was extracted from the original Morphic application, [gpii-app/trayButton](https://github.com/GPII/gpii-app/tree/master/trayButton).
+
+Original PoC: [stegru/tray-button](https://github.com/stegru/tray-button)
+
+![Old screenshot](https://github.com/stegru/tray-button/blob/master/screenshot.png)
 
 ## Build
 
